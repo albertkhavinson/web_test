@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta name="description" content="Salesforce Customer Secure Login Page. Login to your Salesforce Customer Account.">
+        <link type="text/css" rel="stylesheet" href="app.css">
+        <link type="text/css" rel="stylesheet" href="menu.css">
+        <link rel="shortcut icon" type="image/png" href="img/cpfavicon.ico"/>
+        <title>Threats Menu</title>
+        <script type="text/javascript" src="render-template.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <h2>Sandblast Mobile ONP Demo Page</h2>
+            <a target="_blank" href="resource/SBM - ONP Threats Menu - Expected Behavior v 1.2.pdf" download>Demo Guide</a>
+        </div>
+        <div id="page-container">
+        </div>
+        <div id="header">
+            <a onclick="showDisclaimer(true)">Disclaimer note</a>
+        </div>
+        <div class="alert">
+            <span class="closebtn" onclick="hideDisclaimer()">&times;</span>
+            <h2>Disclaimer</h2>
+            <div class='alert-content'>
+                Check Point Software Technologies Ltd.
+
+                This demo tool should be used for demonstration purpose only.
+
+                We are not responsible for the content and implications of usage of the tool and provided hyper-links within it.
+
+                Partner/distributer shell use this tool at their own risk and shell not sell or distribute it without prior written authorization of Check Point.
+            </div>
+        </div>
+        <script>
+            init([
+                    {
+                        img: 'url-filtering.jpg',
+                        title: 'URL\nFiltering',
+                        url: 'url-filtering',
+                        target: '_self',
+                        os: ['Android', 'iOS']
+                    },
+                    {
+                        img: 'safe-browsing.jpg',
+                        title: 'Safe\nBrowsing',
+                        url: 'malicious-url',
+                        target: '_self'
+                    },
+                    {
+                        img: 'phishing.jpg',
+                        title: 'Phishing',
+                        url: 'phishing',
+                        template: 'phishingHTMLTemplate'
+                    },
+                    {
+                        img: 'zero-phishing2.jpg',
+                        title: 'Zero Phishing',
+                        url: 'zero-phishing',
+                        template: 'phishingHTMLTemplate'
+                    },
+                    {
+                        img: 'download-prevention.png',
+                        title: 'Download\nPrevention',
+                        url: 'download-protection',
+                        target: '_self',
+                        os: ['Android', 'iOS']
+                    },
+                    {
+                        img: 'antibot.jpg',
+                        title: 'Anti-Bot',
+                        url: 'malicious-app',
+                        target: '_self'
+                    }
+                ])
+            
+        </script>
+        <script>
+            function showDisclaimer(force) {
+                if(force || !localStorage.getItem("alerted")) {
+                    document.getElementsByClassName('alert')[0].style.display='inline';
+                    localStorage.setItem("alerted", "true");
+                }
+            }
+            function hideDisclaimer() {
+                document.getElementsByClassName('alert')[0].style.display='none';
+            }
+            showDisclaimer();
+        </script>
+    </body>
+</html>

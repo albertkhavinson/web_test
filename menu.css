@@ -1,0 +1,152 @@
+body {
+    background-color: #f4f6f9;
+}
+
+.brand {
+    background-color: #f54e96;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    padding: 12px;
+    margin: 12px;
+}
+
+.brand.back {
+    padding: 12px 48px;
+}
+
+.subtitle {
+    border: 1px solid #336699;
+    width: 165px;
+    margin: auto;
+    text-align: center;
+}
+
+.profile-item {
+    word-break: break-all;
+    margin: 10px;
+    background-color: white;
+    padding: 0 10px;
+    min-width: 90%;
+    text-align: center;
+}
+
+.profile-item h2{
+    min-height: 0 !important;
+    color: #336699;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 2px;
+    background-color: rgb(179, 38, 38);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.green {
+    background-color: greenyellow;
+}
+
+.phishing-urls a {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 0;
+}
+
+#myvideo {
+    height: 0;
+}
+
+#page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#content {
+    z-index: 1000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 10px;
+}
+
+#wrapper.menu-item {
+    margin: 0;
+    max-width: 300px;
+}
+
+#menu-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    height: auto;
+}
+
+#menu-container #content {
+    color: #336699;
+    text-align: center;
+    min-height: 240px;
+}
+
+#menu-container #content img {
+    height: auto;
+    width: 165px;
+}
+
+#wrapper.menu-item.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+h2{
+    white-space: pre-line;
+}
+
+.img-container {
+    height: 165px;
+    width: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-container img {
+    max-height: 190px;
+}
+img[src="img/ios_profile_block.png"] {
+    background-color: #f54e96;
+}
+
+@media only screen and (max-width: 900px) {
+    h2 {
+        margin: 0.4em;
+    }
+    #wrapper.menu-item {
+        max-width: 151px;
+        margin: 0;
+        left: 0;
+        padding-top: 10px !important;
+    }
+    #menu-container #content {
+        padding: 5px 0;
+        min-height: 171px;
+    }
+    #menu-container #content img {
+        height: auto;
+        width: 110px;
+        max-height: 120px;
+    }
+    .subtitle {
+        width: 110px;
+    }
+    .img-container {
+        height: 110px;
+        width: 110px;
+    }
+}
